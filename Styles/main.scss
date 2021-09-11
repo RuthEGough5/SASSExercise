@@ -1,0 +1,60 @@
+// 1. Currently linked via: <link rel="stylesheet" href="Styles/style.css">
+
+// 5.Import the “_values” partial file at the top of the “main.scss” file
+@import "values";
+
+// 2.
+.main {
+    background-color: tan;
+    
+// B3. Return to this!
+// @include flex
+
+    // 3.
+    h1{
+        color: #ddd;
+        // B1.
+        &:hover{
+            @extend %center;
+            text-decoration: underline;
+        }
+    }
+    // 4. Created_values.scss”
+    // 6. In“_values”, Created “$brown1”
+    // 7. 
+    h2{
+        background-color: $brown1;
+     }
+    h3{
+         color: $brown1;
+     }
+
+}
+// 8.
+.minor{
+    
+    background-color: silver;
+    // 12.
+    @extend %center;
+    // 9.
+    h1{
+        text-decoration: underline;
+        //B2.
+        margin-bottom: calc(25px * 4);
+
+    }
+    // 10.
+    h2{
+        text-decoration: line-through;
+    }
+}
+// 11. C_values.scss
+
+
+// BONUS
+// Use the “:hover” pseudo selector on the “Eddie Brock / Venom” h1. Set it so that when you hover over it it has the styles that the “Shriek” h1 has. Must still retain the #ddd color as well. (Hint: Use the “%center” extendable class)
+// Set a 100px bottom margin on the “Shriek” h1 by multiplying 25px by 4
+// Inside the “_values” partial file create a mixin called “flex” with two parameters “$justify” and “$align”. Create the three following properties in the flex mixin (display, justify-content, and align-items). Set the appropriate values for each of the three properties. Then use this mixin to have the “Eddie Brock / Venom” h1 all the way to the left, the “Cletus Kasady / Carnage” h2 in the center, and the “Anne Weying” h3 all the way to the right. Also, use the mixin to make all three centered vertically in the “.main” div
+// NOTE: Remember to Stop the Live Sass Compiler from running…
+// Click the “Watching” button on the bottom bar in VS Code. If you do not see it, then you will need to open the VS Code Command Palette and type/run the “Live Sass: Stop Watching” command
+// When finished, create a repository in the “SassExercise” Folder as well as on GitHub. Add and commit everything in the SassExercise folder and push it up to your GitHub repository. Then paste the link to your GitHub repository page in the form in google classroom. 
